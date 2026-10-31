@@ -1,10 +1,11 @@
- FUFON Field Video - Oku, Cameroon
 
-Watch our raw field work with orphans and vulnerable children:
-[FUFON Video] (https://img.youtube.com/vi/zWmo3SuR1Js/0.jpg)](https://youtube.com/shorts/zWmo3SuR1Js)
+  FUFON Field Video - Oku, Cameroon
 
-Link: https://youtube.com/shorts/zWmo3SuR1Js
+Watch our raw field work:
 
+https://youtube.com/shorts/zWmo3SuR1Js
+
+---
 
 
 FUFON - Oku Bui, Northwest Cameroon
