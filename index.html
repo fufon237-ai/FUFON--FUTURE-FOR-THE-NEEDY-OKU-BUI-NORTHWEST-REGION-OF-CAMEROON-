@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#092b61">
+  <meta name="description" content="FUFON – Future For The Needy is a community-based humanitarian organization supporting vulnerable people through education, food, youth enterprise and farm supplies in Cameroon.">
+  <title>FUFON – Future For The Needy</title>
+  <style>
+    :root{--navy:#092b61;--blue:#1649a3;--gold:#e6bd59;--cream:#fffaf0;--ink:#17243b;--muted:#5e6a7c;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit}
+    .topbar{background:var(--navy);color:#fff;padding:9px 5%;font-size:.9rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .topbar a{text-decoration:none}
+    header{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 3px 18px #0a2a5514}
+    .nav{max-width:1180px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+    .brand img{width:60px;height:60px;object-fit:cover;border-radius:50%;border:2px solid var(--gold)}
+    .brand strong{display:block;color:var(--navy);font-size:1.12rem;line-height:1.2}
+    .brand small{display:block;color:var(--muted);font-size:.78rem;letter-spacing:.04em}
+    nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    nav a{text-decoration:none;font-weight:700;font-size:.92rem;color:#26364d}
+    nav a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:#17243b!important;padding:12px 19px;border-radius:7px;font-weight:800;text-decoration:none;border:2px solid var(--gold);transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(.97)}
+    .btn.blue{background:var(--navy);border-color:var(--navy);color:#fff!important}
+    .hero{background:linear-gradient(115deg,rgba(5,28,67,.94),rgba(8,48,105,.76)),url('assets/fufon-children.jpg') center 42%/cover;color:#fff}
+    .hero-inner{max-width:1180px;margin:auto;padding:90px 22px 84px;display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
+    .eyebrow{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.82rem}
+    h1{font-size:clamp(2.5rem,5vw,4.6rem);line-height:1.06;margin:14px 0 20px;letter-spacing:-.04em}
+    .hero p{font-size:1.12rem;max-width:650px;color:#edf3ff}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .hero .outline{border:2px solid #fff;color:#fff;text-decoration:none;padding:11px 18px;border-radius:7px;font-weight:700}
+    .hero-card{background:#fff;color:var(--ink);padding:25px;border-radius:16px;box-shadow:0 18px 50px #00102d55}
+    .hero-card img{width:100%;display:block;border-radius:11px;max-height:290px;object-fit:cover}
+    .hero-card h3{margin:18px 0 5px;color:var(--navy)}
+    .hero-card p{font-size:.96rem;color:var(--muted);margin:0}
+    section{padding:76px 22px}
+    .wrap{max-width:1120px;margin:auto}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 38px}
+    .section-head .eyebrow{color:var(--blue)}
+    h2{color:var(--navy);font-size:clamp(2rem,3.5vw,3rem);line-height:1.15;margin:10px 0 14px;letter-spacing:-.025em}
+    .section-head p{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+    .about-photo{width:100%;border-radius:18px;box-shadow:0 12px 35px #0a2a551a}
+    .about-copy p{color:var(--muted)}
+    .callout{background:var(--cream);border-left:5px solid var(--gold);padding:17px 20px;border-radius:0 10px 10px 0;font-weight:700;color:var(--navy);margin:24px 0}
+    .soft{background:#f5f8fd}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:#fff;border:1px solid #e5ebf4;border-radius:14px;padding:24px 21px;box-shadow:0 8px 24px #0a2a5508}
+    .card .symbol{font-size:2rem;margin-bottom:12px}
+    .card h3{color:var(--navy);margin:0 0 8px;font-size:1.12rem}
+    .card p{color:var(--muted);font-size:.95rem;margin:0}
+    .mission-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:38px;align-items:start}
+    .mission-panel{background:var(--navy);color:#fff;padding:30px;border-radius:16px}
+    .mission-panel h2{color:#fff}
+    .mission-panel p{color:#e4edff}
+    .mission-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .mission-item{padding:18px;background:#f5f8fd;border-radius:10px;border:1px solid #e6edf7}
+    .mission-item strong{color:var(--navy);display:block;margin-bottom:5px}
+    .offices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .office{border-top:4px solid var(--gold);padding:22px;border-radius:10px;background:#f5f8fd}
+    .office h3{margin:0 0 8px;color:var(--navy)}
+    .office p{margin:0;color:var(--muted)}
+    .donate{background:linear-gradient(120deg,#082858,#1649a3);color:#fff}
+    .donate h2{color:#fff}
+    .donate .section-head p{color:#e1eaff}
+    .donation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .donation-method{background:#fff;color:var(--ink);padding:24px;border-radius:13px}
+    .donation-method h3{color:var(--navy);margin:0 0 8px}
+    .number{font-size:1.4rem;font-weight:800;letter-spacing:.02em;overflow-wrap:anywhere}
+    .donation-method p{color:var(--muted);font-size:.9rem;margin:5px 0 0}
+    .donate-note{text-align:center;color:#e1eaff;font-size:.92rem;margin:24px auto 0;max-width:760px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+    .contact-box{background:#f5f8fd;border-radius:14px;padding:28px}
+    .contact-box h3{color:var(--navy);margin-top:0}
+    .contact-row{margin:15px 0}
+    .contact-row strong{display:block;color:var(--navy)}
+    .contact-row a{text-decoration:none;color:var(--blue);overflow-wrap:anywhere}
+    footer{background:#061a3b;color:#dbe6fa;padding:28px 22px}
+    .footer-inner{max-width:1120px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .footer-inner strong{color:#fff}
+    .footer-links{display:flex;gap:15px;flex-wrap:wrap}
+    .footer-links a{color:#dbe6fa;text-decoration:none;font-size:.9rem}
+    .copyright{font-size:.85rem;color:#b7c7e2;margin-top:8px}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding-top:68px}.hero-card{max-width:560px}.cards{grid-template-columns:repeat(2,1fr)}.about-grid,.mission-layout,.contact-grid{grid-template-columns:1fr}.offices{grid-template-columns:1fr}.donation-grid{grid-template-columns:1fr}}
+    @media(max-width:620px){.topbar{justify-content:center;text-align:center}.nav{align-items:flex-start}.brand img{width:48px;height:48px}.brand strong{font-size:.95rem}.brand small{font-size:.68rem}nav{gap:10px;justify-content:flex-end}nav a{font-size:.8rem}nav .btn{padding:8px 10px;font-size:.8rem}.hero-inner{padding:58px 20px}.hero p{font-size:1rem}section{padding:56px 20px}.cards,.mission-list{grid-template-columns:1fr}.number{font-size:1.25rem}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>Hope grows when we stand together.</span>
+    <span><a href="mailto:fufon237@gmail.com">fufon237@gmail.com</a> &nbsp; | &nbsp; <a href="https://wa.me/237680569560" target="_blank" rel="noopener">WhatsApp: +237 680 569 560</a></span>
+  </div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home" aria-label="FUFON home">
+        <img src="assets/fufon-logo.jpg" alt="FUFON logo">
+        <span><strong>FUFON</strong><small>FUTURE FOR THE NEEDY · SINCE 2016</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#mission">Our Mission</a><a href="#offices">Offices</a><a href="#contact">Contact</a>
+        <a class="btn" href="#donate">Donate Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Humanitarian organization · Cameroon</div>
+          <h1>Hope grows when we stand together.</h1>
+          <p>FUFON – Future For The Needy works to support vulnerable people and help children, young people and families build a brighter future through education, food support, practical resources and opportunity.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#donate">Donate Now</a>
+            <a class="outline" href="#about">Discover Our Work</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <img src="assets/fufon-children.jpg" alt="FUFON community and schoolchildren image">
+          <h3>Every person deserves a chance.</h3>
+          <p>Working with compassion, dignity and community spirit to make support and opportunity more accessible.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div><img class="about-photo" src="assets/fufon-children.jpg" alt="Children representing the communities FUFON seeks to support"></div>
+        <div class="about-copy">
+          <div class="eyebrow">Who we are</div>
+          <h2>FUFON – Future For The Needy</h2>
+          <p>FUFON – Future For The Needy is a community-based humanitarian organization co-founded by <strong>Ndimongang Ernest Chia and team</strong> in Oku, Bui, Northwest Region of Cameroon, in 2016.</p>
+          <p>We are committed to assisting the most vulnerable and less privileged, including persons with disabilities, orphans, abandoned people, people experiencing depression, and children who have dropped out of school.</p>
+          <div class="callout">Our belief: everyone deserves dignity, support and the opportunity to build a better future.</div>
+          <a class="btn blue" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="mission">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What guides us</div>
+          <h2>Our mission</h2>
+          <p>To help vulnerable people access essential support, learning opportunities and practical tools for a more secure and independent future.</p>
+        </div>
+        <div class="mission-layout">
+          <div class="mission-panel">
+            <h2>Care that creates opportunity</h2>
+            <p>We aim to respond to immediate needs while helping individuals and families strengthen their prospects for the future.</p>
+            <a class="btn" href="#donate">Support Our Mission</a>
+          </div>
+          <div class="mission-list">
+            <div class="mission-item"><strong>📚 Education</strong><span>Encouraging learning and helping children and young people reconnect with education.</span></div>
+            <div class="mission-item"><strong>🍲 Food support</strong><span>Helping vulnerable individuals and families access food and basic necessities.</span></div>
+            <div class="mission-item"><strong>🌱 Youth start-ups</strong><span>Supporting vulnerable youths with small start-up business opportunities.</span></div>
+            <div class="mission-item"><strong>🌾 Farm supplies</strong><span>Providing basic farming supplies to support livelihoods and food production.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Who we support</div>
+          <h2>Standing alongside those who need us</h2>
+          <p>Our work focuses on people and families who face barriers to care, education and opportunity.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="symbol">🤝</div><h3>Vulnerable people</h3><p>Support for people experiencing hardship and those with limited access to resources.</p></article>
+          <article class="card"><div class="symbol">💛</div><h3>Orphans & abandoned people</h3><p>Compassionate assistance for people who may lack stable family or community support.</p></article>
+          <article class="card"><div class="symbol">♿</div><h3>Persons with disabilities</h3><p>Promoting inclusion, dignity and access to practical support.</p></article>
+          <article class="card"><div class="symbol">🎒</div><h3>Children out of school</h3><p>Encouraging pathways back to learning and better opportunities for young people.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="offices">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Where to find us</div>
+          <h2>Our offices</h2>
+          <p>FUFON has its roots in Oku and listed offices in Cameroon.</p>
+        </div>
+        <div class="offices">
+          <div class="office"><h3>Oku Office</h3><p>Oku, Bui Division, Northwest Region, Cameroon</p></div>
+          <div class="office"><h3>Nkwen – Bamenda Office</h3><p>Nkwen, Bamenda, Northwest Region, Cameroon</p></div>
+          <div class="office"><h3>Douala Annex Office</h3><p>Douala, Littoral Region, Cameroon</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="donate" id="donate">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Make a difference</div>
+          <h2>Donate to FUFON</h2>
+          <p>Your support can help us work toward education, food assistance, youth start-ups and basic farm supplies for vulnerable communities.</p>
+        </div>
+        <div class="donation-grid">
+          <div class="donation-method"><h3>MTN Mobile Money (MoMo)</h3><div class="number">680 569 560</div><p>Cameroon</p><p><a href="https://wa.me/237680569560">Contact us on WhatsApp</a></p></div>
+          <div class="donation-method"><h3>Orange Money</h3><div class="number">687 856 776</div><p>Cameroon</p><p>Please confirm recipient details before sending.</p></div>
+          <div class="donation-method"><h3>USD – LEAD</h3><div class="number">212328332980</div><p>Use the provided LEAD donation details.</p><p>Please verify the transfer instructions with FUFON first.</p></div>
+        </div>
+        <p class="donate-note">For donation confirmation or questions about how to contribute, contact FUFON directly at <a href="mailto:fufon237@gmail.com">fufon237@gmail.com</a> or WhatsApp <a href="https://wa.me/237680569560">+237 680 569 560</a>.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">We would love to hear from you</div>
+          <h2>Contact FUFON</h2>
+          <p>To learn more about our work, volunteer, partner with us or ask about donations, please get in touch.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3>Contact information</h3>
+            <div class="contact-row"><strong>WhatsApp / Phone</strong><a href="https://wa.me/237680569560" target="_blank" rel="noopener">+237 680 569 560</a></div>
+            <div class="contact-row"><strong>Email</strong><a href="mailto:fufon237@gmail.com">fufon237@gmail.com</a></div>
+            <div class="contact-row"><strong>Main address</strong><span>Oku, Bui, Northwest Region of Cameroon</span></div>
+          </div>
+          <div class="contact-box">
+            <h3>Join us in making a difference</h3>
+            <p>Community members, volunteers, donors and partner organizations all have a role to play in creating a more hopeful future.</p>
+            <p>Send us a message and tell us how you would like to support or work with FUFON.</p>
+            <a class="btn blue" href="https://wa.me/237680569560?text=Hello%20FUFON%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20work." target="_blank" rel="noopener">Message us on WhatsApp</a>
+            <p style="font-size:.86rem;color:#5e6a7c;margin-top:15px">For email, tap: <a href="mailto:fufon237@gmail.com">fufon237@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FUFON MUSIC + 75 VIEWS ADDED DIRECTLY -->
+<section style="background:#f0f4ff; padding:30px 15px; text-align:center; font-family:sans-serif; border-radius:15px; margin:20px 10px;">
+  <h2 style="color:#092b61; margin:0 0 15px;">🎵 FUFON Songs for Children</h2>
+  <div style="max-width:500px; margin:0 auto; background:white; padding:20px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    <p style="font-weight:bold; color:#092b61; margin:0 0 10px;">Hope Grows Together</p>
+    <a href="https://suno.com/s/ugKT2m8mrw3SX9kf" target="_blank" style="display:block; background:#092b61; color:white; padding:14px; border-radius:30px; text-decoration:none; font-weight:bold;">▶️ Play FUFON Anthem</a>
+    <div style="margin-top:15px; border-top:1px solid #eee; padding-top:12px; font-size:14px; color:#5e6a83;">👁️ <b id="view-count" style="color:#092b61;">75</b> supporters viewed</div>
+  </div>
+</section>
+<script>
+fetch('https://api.countapi.xyz/hit/fufon237-75/visits').then(r=>r.json()).then(r=>{
+ let total = 74 + r.value;
+ document.getElementById('view-count').innerText = total;
+}).catch(()=>{});
+</script>
+<!-- END -->
+   <footer >
+ <div class="footer-inner">
+      <div><strong>FUFON – Future For The Needy</strong><div class="copyright">Co-founded in Oku in 2016 · Cameroon</div></div>
+      <div class="footer-links"><a href="#about">About</a><a href="#mission">Mission</a><a href="#donate">Donate</a><a href="#contact">Contact</a></div>
+      <div class="copyright">© <span id="year">2026</span> FUFON. All rights reserved.</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
